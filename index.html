@@ -1,15 +1,439 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
+
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+
+    <title>Onur Kantar</title>
+
+    <link rel="stylesheet" href="style.css">
+
+
+
+    <script src="https://kit.fontawesome.com/b05edded2b.js" crossorigin="anonymous"></script>
+    <script src="./scroll.js"></script>
+
+
+
+    <script src="/menu.js"></script>
+
 </head>
 
-<body>
-    <h1>SEA</h1>
+
+
+<body id="body">
+
+    <div id="container">
+
+        <div class="header">
+
+            <img src="./img/logo.png" alt="logo">
+
+
+
+            <div class="header-right">
+
+
+
+
+
+            </div>
+
+        </div>
+
+
+
+        <!--www.w3schools.com'dan alıntı-->
+
+        <div class="topnav" id="myTopnav">
+
+            <a href="/index.html" class="active">Anasayfa</a>
+
+
+
+
+            <div class="dropdown">
+
+                <button class="dropbtn">Videolar
+
+                  </button>
+
+                <div class="dropdown-content">
+                    <a href="/video1.html">Elvis Presley</a>
+
+                    <a href="/video2.html">Charlie Chaplin</a>
+
+                    <a href="/video3.html">Mr. Bean</a>
+                </div>
+
+            </div>
+
+            <div class="dropdown">
+
+                <button class="dropbtn">Çalışmalar
+
+                  </button>
+
+                <div class="dropdown-content">
+
+
+                    <a target="_blank" href="/studies1.html">Chernozem</a>
+
+                    <a target="_blank" href="/studies2.html">Mobilya Otomasyonu</a>
+
+                    <a target="_blank" href="/studies3.html">Course Management System</a>
+
+                </div>
+
+            </div>
+
+            <a href="/about.html">Hakkımda</a>
+
+            <a href="/contact.html">İletişim</a>
+
+
+
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+
+        </div>
+
+        <!--www.w3schools.com'dan alıntı-->
+
+
+
+        <!--Slider-->
+
+        <!--www.w3schools.com'dan alıntı-->
+
+
+
+        <div class="slideshow-container">
+
+
+
+            <!-- Full-width images with number and caption text -->
+
+            <div class="mySlides fade">
+
+                <img src="./img/img1.jpg" style="width:100%">
+
+            </div>
+
+
+
+            <div class="mySlides fade">
+
+                <img src="./img/img2.jpg" style="width:100%">
+
+            </div>
+
+
+
+            <div class="mySlides fade">
+
+                <img src="./img/img3.jpg" style="width:100%">
+
+            </div>
+
+
+
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
+
+        <br>
+
+
+
+
+        <div style="text-align:center">
+
+            <span class="dot" onclick="currentSlide(1)"></span>
+
+            <span class="dot" onclick="currentSlide(2)"></span>
+
+            <span class="dot" onclick="currentSlide(3)"></span>
+
+        </div>
+
+
+
+        <script src="slider.js"></script>
+
+        <!--Slider-->
+
+        <!--www.w3schools.com'dan alıntı-->
+
+        <div class="clear"></div>
+
+        <div class="contents">
+
+            <div class="contents-left">
+
+                <div class="title">
+
+                    <h1>Haberler</h1>
+
+                </div>
+
+                <div class="content">
+
+                    <div class="img">
+
+                        <img src="./img/cybertruck.jpg" alt="cybertruck">
+
+                    </div>
+
+                    <div class="description">
+
+                        <h3><a target="_blank" href="https://www.log.com.tr/tesla-cybertruck-spor-otomobil-formunda-nasil-gorunurdu/?utm_campaign=Bundle&utm_medium=referral&utm_source=Bundle">Tesla Cybertruck “spor otomobil” formunda nasıl görünürdü?</a></h3>
+
+                        <p>Tesla Cybertruck tasarımıyla çok ses getiren bir elektrikli pickup oldu. Peki bu araç “spor otomobil” formunda nasıl görünürdü? İşte cevabı;</p>
+
+                        </p>
+
+                    </div>
+
+
+
+                </div>
+
+                <div class="content">
+
+                    <div class="img">
+
+                        <img src="./img/iphone.jpeg" alt="cybertruck">
+
+                    </div>
+
+                    <div class="description">
+
+                        <h3>
+
+                            <a target="_blank" href="https://shiftdelete.net/apple-cihazlarda-konum-servisi-hatasi-kesfedildi?utm_campaign=Bundle&utm_medium=referral&utm_source=Bundle">Apple cihazlarda kritik hata keşfedildi</a></h3>
+
+                        <p>iPhone ailesinin en yeni üyeleri bu kez bir güvenlik açığı ile gündeme geldi. Kullanıcıların yaptığı bildirimlere göre, iPhone 11 Pro’nun konum verilerini topluyor.
+
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="content">
+
+                    <div class="img">
+
+                        <img src="./img/samsung.jpg" alt="cybertruck">
+
+                    </div>
+
+                    <div class="description">
+
+                        <h3> <a target="_blank" href="https://www.donanimhaber.com/samsung-galaxy-a-2020-serisi-12-aralik-ta-tanitilacak--116581"> Samsung Galaxy A 2020 serisi 12 Aralık'ta tanıtılacak </a></h3>
+
+                        <p>Son birkaç haftadır Samsung'un Galaxy A 2020 serisi akıllı telefonlar üzerinde çalıştığına dair söylentiler vardı. Bu bilgiler sonunda resmiyet kazandı.</p>
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+            <div class="contents-right">
+
+                <div class="title">
+
+                    <h1>Duyurular</h1>
+
+                </div>
+
+                <div class="content">
+
+                    <div class="img">
+
+                        <img src="./img/sudan.jpg" alt="cybertruck">
+
+                    </div>
+
+                    <div class="description">
+
+                        <h3> <a target="_blank" href="https://www.afad.gov.tr/sudan-yardim-kampanyasi"> Sudan İnsani Yardım Kampanyası </a></h3>
+
+                        <p>Tarihindeki en büyük sel felaketini yaşayan Sudan halkı için Cumhurbaşkanlığı Kararnamesi ile insani yardım kampanyası başlatıldı. ‘Sudan Sel Felaketi Yardım Kampanyası’, AFAD koordinasyonunda yürütülüyor.
+
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="content">
+
+                    <div class="img">
+
+                        <img src="./img/erciyes-universitesi.jpg" alt="cybertruck">
+
+                    </div>
+
+                    <div class="description">
+
+
+                        <h3> <a target="_blank" href="https://isletmecilik.org/"> Erciyes Üniversitesi "19. Uluslararası İşletmecilik Kongresi" 
+                        </a>
+                        </h3>
+                        <p>Erciyes Üniversitesi İktisadi ve İdari Bilimler Fakültesi İşletme Bölümü tarafından, 16-18 Nisan 2020 tarihleri arasında "19. Uluslararası İşletmecilik Kongresi" düzenlenecektir.
+
+
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="content">
+
+                    <div class="img">
+
+                        <img src="./img/elvan-celebi.jpeg" alt="cybertruck">
+
+                    </div>
+
+                    <div class="description">
+
+                        <h3> <a target="_blank" href="http://www.elvancelebi2020.hitit.edu.tr/">Elvan Çelebi Sempozyumu
+                        </a> </h3>
+
+                        <p>Üniversitemiz tarafından, Türk Tarih Kurumu'nun da katkılarıyla 10-12 Nisan 2020 tarihleri arasında "Uluslararası Horasan'dan Anadolu'ya İrfan Geleneği; Elvan Çelebi Sempozyumu" düzenlenecektir. Tüm akademik ve idari personelimize
+                            duyurulur.
+
+
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+        <div class="clear"></div>
+
+        <footer>
+
+
+
+            <div class="info">
+
+                <div class="info-left">
+
+                    <h3>
+
+                        İletişim
+
+                    </h3>
+
+                    <p>
+
+                        Fatih Mh. Yakacık Cd. Gazali Sk.
+
+                        <br> Sancaktepe / İstanbul
+
+                    </p>
+
+                    <p>
+
+                        <i class="fas fa-phone-alt"></i> +90 541 608 83 68
+
+                    </p>
+
+                    <p>
+
+                        <i class="fas fa-envelope"></i> onurkantr@gmail.com
+
+                    </p>
+
+                </div>
+
+                <div class="info-right">
+
+                    <h3>
+
+                        Hakkımda
+
+                    </h3>
+
+                    <p>
+
+                        Merhaba ben Onur Kantar, Kocaeli Üniversitesi Bilişim Sistemleri Mühendisliği Bölümü'nde okuyorum Bu web sitesi Web Tasarım dersinin proje ödevidir.
+
+                        <br>
+                        <a class="social" href="https://github.com/simiyen">
+                            <i class="fab fa-github-square fa-3x"></i>
+                        </a>
+                        <a class="social" href="https://www.linkedin.com/in/onur-kantar-580ab1ab/">
+
+                            <i class="fab fa-linkedin fa-3x"></i>
+                        </a>
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="clear"></div>
+
+
+
+            <div class="copyright">
+
+                <p>
+
+                    Onur Kantar © 2013 – 2019 - Tüm Hakları Saklıdır.
+
+
+
+                </p>
+
+            </div>
+
+
+
+
+
+        </footer>
+
+    </div>
+    <a href="#body">
+        <div id="backToTop">
+            <i class="fas fa-arrow-up"></i>
+        </div>
+    </a>
 </body>
+
+
 
 </html>
