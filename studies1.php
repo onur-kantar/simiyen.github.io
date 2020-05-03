@@ -2,8 +2,6 @@
 
 <html lang="en">
 
-
-
 <head>
 
     <meta charset="UTF-8">
@@ -16,98 +14,24 @@
 
     <link rel="stylesheet" href="style.css">
 
-
-
     <script src="https://kit.fontawesome.com/b05edded2b.js" crossorigin="anonymous"></script>
     <script src="./scroll.js"></script>
-
-
 
     <script src="/menu.js"></script>
 
 </head>
 
-
-
 <body id="body">
 
     <div id="container">
 
-        <div class="header">
+        <!--LOGO-->
+        <?php include 'php/logo.php'; ?>
+        <!--LOGO-->
 
-            <a href="/index.html"><img src="./img/logo.png" alt="logo">
-            </a>
-
-
-            <div class="header-right">
-
-
-
-
-
-            </div>
-
-        </div>
-
-
-
-        <!--www.w3schools.com'dan alıntı-->
-
-        <div class="topnav" id="myTopnav">
-
-            <a href="/index.html" class="active">Anasayfa</a>
-
-            <div class="dropdown">
-
-
-                <button class="dropbtn">Videolar
-
-                </button>
-
-                <div class="dropdown-content">
-
-                    <a href="/video1.html">Elvis Presley</a>
-
-                    <a href="/video2.html">Charlie Chaplin</a>
-
-                    <a href="/video3.html">Mr. Bean</a>
-
-
-                </div>
-
-            </div>
-
-            <div class="dropdown">
-
-                <button class="dropbtn">Çalışmalar
-
-                  </button>
-
-                <div class="dropdown-content">
-
-
-                    <a target="_blank" href="/studies1.html">Chernozem</a>
-
-                    <a target="_blank" href="/studies2.html">Mobilya Otomasyonu</a>
-
-                    <a target="_blank" href="/studies3.html">Course Management System</a>
-                </div>
-
-            </div>
-
-            <a href="/about.html">Hakkımda</a>
-
-            <a href="/contact.html">İletişim</a>
-
-
-
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-
-        </div>
-
-        <!--www.w3schools.com'dan alıntı-->
-
-
+        <!--MENU-->
+        <?php include 'php/menu.php'; ?>
+        <!--MENU-->
 
         <div class="clear"></div>
         <div class="studies">
@@ -127,104 +51,19 @@
                 Kullanıcılar paketlere karar verip satın aldıktan sonra kurulum aşamasını gerçekleştiriyoruz. Kurulumu tamamladıktan sonra ekilen bitkilerde ve arazide ısı, nem, kamera, toprak gibi sensörler işlenerek çıkan değerlere göre havalandırma,
                 ilaçlama, sulama, gübreleme gibi eylemler gerçekleştirilir. Bu sayede çiftçiye daha az iş düşmektedir ve çiftçi zaman ve güç açısından tasarruf edebilmektedir.</p>
         </div>
+        
         <div class="clear"></div>
 
-        <footer>
-
-
-
-            <div class="info">
-
-                <div class="info-left">
-
-                    <h3>
-
-                        İletişim
-
-                    </h3>
-
-                    <p>
-
-                        Fatih Mh. Yakacık Cd. Gazali Sk.
-
-                        <br> Sancaktepe / İstanbul
-
-                    </p>
-
-                    <p>
-
-                        <i class="fas fa-phone-alt"></i> +90 541 608 83 68
-
-                    </p>
-
-                    <p>
-
-                        <i class="fas fa-envelope"></i> onurkantr@gmail.com
-
-                    </p>
-
-                </div>
-
-                <div class="info-right">
-
-                    <h3>
-
-                        Hakkımda
-
-                    </h3>
-
-                    <p>
-
-                        Merhaba ben Onur Kantar, Kocaeli Üniversitesi Bilişim Sistemleri Mühendisliği Bölümü'nde okuyorum Bu web sitesi Web Tasarım dersinin proje ödevidir.
-
-                        <br>
-                        <a class="social" href="https://github.com/simiyen">
-                            <i class="fab fa-github-square fa-3x"></i>
-                        </a>
-                        <a class="social" href="https://www.linkedin.com/in/onur-kantar-580ab1ab/">
-
-                            <i class="fab fa-linkedin fa-3x"></i>
-                        </a>
-
-                    </p>
-
-                </div>
-
-            </div>
-
-
-
-            <div class="clear"></div>
-
-
-
-            <div class="copyright">
-
-                <p>
-
-                    Onur Kantar © 2013 – 2019 - Tüm Hakları Saklıdır.
-
-
-
-                </p>
-
-            </div>
-
-
-
-
-
-        </footer>
+        <!--FOOTER-->
+        <?php include 'php/footer.php'; ?>
+        <!--FOOTER-->
 
     </div>
-    <a href="#body">
 
-        <div id="backToTop">
-            <i class="fas fa-arrow-up"></i>
-        </div>
-    </a>
+    <!--BACK TO TOP-->
+    <?php include 'php/backToTop.php'; ?>
+    <!--BACK TO TOP-->
+
 </body>
-
-
 
 </html>
