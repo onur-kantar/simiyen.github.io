@@ -25,50 +25,44 @@
 
     <div id="container">
 
-
         <?php
-
-        try {
-
-            $db_ad = 'simiyen';
-            $db_kullanici = 'root';
-            $db_sifre = '';
-            $db = new PDO('mysql:host=localhost;dbname=' . $db_ad, $db_kullanici, $db_sifre);
-
-            foreach ($db->query('SELECT * from users') as $satir) {
-                print_r($satir);
-            }
-            $db = null;
-        } catch (PDOException $e) {
-            print "Bağantı Hatası!: " . $e->getMessage() . "<br/>";
-            die();
+        require_once 'php/logo.php';
+        require_once 'php/menu.php';
+        if (!isset($_GET['page'])) {
+            $_GET['page'] = 'index';
         }
-
+        switch ($_GET['page']) {
+            case 'index':
+                require_once 'php/slider.php';
+                require_once 'php/contents.php';
+                break;
+            case 'video1':
+                require_once 'php/video1.php';
+                break;
+            case 'video2':
+                require_once 'php/video2.php';
+                break;
+            case 'video3':
+                require_once 'php/video3.php';
+                break;
+            case 'studies1':
+                require_once 'php/studies1.php';
+                break;
+            case 'studies2':
+                require_once 'php/studies2.php';
+                break;
+            case 'studies3':
+                require_once 'php/studies3.php';
+                break;
+            case 'about':
+                require_once 'php/about.php';
+                break;
+            case 'contact':
+                require_once 'php/contact.php';
+                break;
+        }
+        require_once 'php/footer.php';
         ?>
-        <!--LOGO-->
-        <?php include 'php/logo.php'; ?>
-        <!--LOGO-->
-
-        <!--MENU-->
-        <?php include 'php/menu.php'; ?>
-        <!--MENU-->
-
-        <!--MENU-->
-        <?php include 'php/slider.php'; ?>
-        <!--MENU-->
-
-        <div class="clear"></div>
-
-        <!--CONTENTS-->
-        <?php include 'php/contents.php'; ?>
-        <!--CONTENTS-->
-
-        <div class="clear"></div>
-
-        <!--FOOTER-->
-        <?php include 'php/footer.php'; ?>
-        <!--FOOTER-->
-
     </div>
     <!--BACK TO TOP-->
     <?php include 'php/backToTop.php'; ?>

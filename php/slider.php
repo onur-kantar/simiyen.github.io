@@ -36,6 +36,7 @@
     <span class="dot" onclick="currentSlide(3)"></span>
 
 </div>
+<div class="clear"></div>
 
-<script src="slider.js"></script>
+<script src="js/slider.js"></script>
 <!--www.w3schools.com'dan alıntı-->
