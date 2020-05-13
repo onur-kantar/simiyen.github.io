@@ -21,8 +21,8 @@
 
         <?php
 
-        require __DIR__.'/app/init.php';
-/*
+        
+
         require_once 'php/logo.php';
         require_once 'php/menu.php';
         if (!isset($_GET['page'])) {
@@ -58,10 +58,10 @@
                 require_once 'php/contact.php';
                 break;
         }
-        require_once 'php/footer.php';*/
+        require_once 'php/footer.php';
         ?>
     </div>
-    <?php // include 'php/backToTop.php'; ?>
+    <?php include 'php/backToTop.php'; ?>
 </body>
 
 </html>
