@@ -3,13 +3,13 @@
 
     <a href="index.php" class="active">Anasayfa</a>
 
-    <div class="dropdown">
+    <div class="myDropdown">
 
         <button class="dropbtn">Videolar
 
         </button>
 
-        <div class="dropdown-content">
+        <div class="myDropdown-content">
             <a href="index.php?page=video1">Elvis Presley</a>
 
             <a href="index.php?page=video2">Charlie Chaplin</a>
@@ -19,13 +19,13 @@
 
     </div>
 
-    <div class="dropdown">
+    <div class="myDropdown">
 
         <button class="dropbtn">Çalışmalar
 
         </button>
 
-        <div class="dropdown-content">
+        <div class="myDropdown-content">
 
 
             <a target="_blank" href="index.php?page=studies1">Chernozem</a>
