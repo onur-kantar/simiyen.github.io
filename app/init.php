@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+ob_start();
 function loadClasses($className){
     require __DIR__ . '/classes/' . strtolower($className) . '.php';
 }
