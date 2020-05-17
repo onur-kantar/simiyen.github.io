@@ -7,6 +7,10 @@ if (!route(1)) {
 if (!file_exists(admin_controller(route(1)))) {
     $route[1] = 'index';
 }
+if(!session('role') || session('role') != 1)
+{
+    $route[1] = 'login';
+}
 
 $menus = [
     'users' => [

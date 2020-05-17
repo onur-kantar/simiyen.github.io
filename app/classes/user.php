@@ -8,6 +8,9 @@ class User
         $_SESSION['name'] = $data['name'];
         $_SESSION['surName'] = $data['surName'];
         $_SESSION['mail'] = $data['mail'];
+        if(isset($data['role_id']))
+        $_SESSION['role'] = $data['role_id'];
+        
     }
     public static function userExist($mail)
     {

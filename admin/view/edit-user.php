@@ -1,7 +1,8 @@
-<?php require_once admin_view('/static/header');
+<?php require admin_view('static/header') ?>
 
-?>
-<h3>Admin</h3>
+<h3>
+    Üye Düzenle
+</h3>
 
 <div class="clear" style="height: 10px;"></div>
 
@@ -19,10 +20,18 @@
             <label for="InputEmail">E-Posta</label>
             <input name="mail" type="email" class="form-control" id="InputEmail" value="<?= post('mail') ? post('mail') : $row['mail'] ?>">
         </div>
+        <label>Rütbe</label>
+        <div class="form-group">
+            <select class="custom-select" name="role_id">
+                <?php foreach ($roles as $role) : ?>
+                    <option <?= (post('role_id') ? post('role_id') : $row['role_id']) == $role['role_id'] ? ' selected' : null ?> value="<?= $role['role_id'] ?>"><?= $role['role_name'] ?></option>
+                <?php endforeach; ?>
+            </select>
+        </div>
         <button name="submit" value="1" type="submit" class="btn btn-primary">Kaydet</button>
+        <a class="btn btn-danger" href="<?=admin_url('users')?>">Geri Dön</a>
         </ul>
     </form>
 </div>
 
-
-<?php require_once admin_view('/static/footer') ?>
+<?php require admin_view('static/footer') ?>

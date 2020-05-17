@@ -4,39 +4,37 @@
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Ad</th>
+      <th scope="col">Soyad</th>
+      <th scope="col">Mail</th>
+      <th scope="col">Kayıt Tarihi</th>
+      <th scope="col">Rol</th>
+      <th scope="col">Düzenle / Sil</th>
+
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
+    <?php foreach ($query as $row) : ?>
+      <tr>
+        <th scope="row"><?= $row['id'] ?></th>
+        <td><?= $row['name'] ?></td>
+        <td><?= $row['surName'] ?></td>
+        <td><?= $row['mail'] ?></td>
+        <td><?= $row['date'] ?></td>
+        <td><?= $row['role_name'] ?></td>
+        <td>
+          <a href="<?= admin_url('edit-user?id=' . $row['id']) ?>" class="btn btn-success">Düzenle</a>
+          <a onclick="return confirm('Silmek İstediğinize Emin Misiniz?')"
+          href="<?= admin_url('delete?table=users&column=id&id=' . $row['id']) ?>" class="btn btn-danger">Sil</a>
+        </td>
+      </tr>
+    <?php endforeach; ?>
   </tbody>
 </table>
 
-<?php if ($totalRecord > $pageLimit): ?>
-    <div class="pagination">
-        <ul>
-            <?= $db->showPagination(admin_url(route(1) . '?' . $pageParam . '=[page]')) ?>
-        </ul>
-    </div>
+<?php if ($totalRecord > $pageLimit) : ?>
+    <ul class="pagination pagination-sm">
+      <?= $db->showPagination(admin_url(route(1) . '?' . $pageParam . '=[page]')) ?>
+    </ul>
 <?php endif; ?>
-
 <?php require_once admin_view('/static/footer') ?>

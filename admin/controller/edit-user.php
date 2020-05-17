@@ -1,15 +1,18 @@
 <?php
 
-$id = $_SESSION['id'];
-
+$id = get('id');
 if (!$id) {
-    header('Location:' . admin_url('login'));
+    header('Location:' . admin_url('users'));
     exit;
 }
 
 $row = $db->from('users')
     ->where('id', $id)
     ->first();
+
+$roles = $db->from('roles')
+    ->all();
+
 
 if (!$row) {
     header('Location:' . admin_url('users'));
@@ -19,7 +22,6 @@ if (!$row) {
 if (post('submit')) {
 
     if ($data = form_control('mail')) {
-        print_r($data); 
 
         //$data['user_url'] = permalink($data['name']);
 
@@ -28,7 +30,7 @@ if (post('submit')) {
             ->set($data);
 
         if ($query) {
-            header('Location:' . admin_url());
+            header('Location:' . admin_url('users'));
         } else {
             $error = 'Bir sorun oluştu.';
         }
@@ -36,4 +38,5 @@ if (post('submit')) {
         $error = 'Eksik alanlar var, lütfen kontrol edin.';
     }
 }
-require admin_view('index');
+
+require admin_view('edit-user');

@@ -17,7 +17,7 @@
     <div id="container">
 
         <div class="header">
-            <a href="index.php">
+            <a href="<?=site_url()?>">
                 <img src="./img/logo.png" alt="logo">
             </a>
             <div class="header-right">
