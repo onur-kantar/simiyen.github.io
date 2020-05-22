@@ -5,6 +5,10 @@ function site_url($url = false){
     return URL.'/'.$url;
 
 }
+function img_url($url = false){
+    return URL.'/img/'.$url;
+
+}
 
 function public_url($url = false){
 

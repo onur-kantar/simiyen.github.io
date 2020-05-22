@@ -28,7 +28,8 @@
                         <?php foreach ($menus as $mainUrl => $menu) : ?>
                             <a class="nav-item nav-link <?= route(1) == $mainUrl ? 'active' : null ?>" href="<?= admin_url($mainUrl) ?>"><?= $menu['title'] ?> <span class="sr-only">(current)</span></a>
                         <?php endforeach; ?>
-                        <a class="nav-item nav-link <?= route(1) == $mainUrl ? 'active' : null ?>" href="<?= admin_url('exit') ?>">Çıkış</a>
+                        <a class="nav-item nav-link" href="<?= site_url() ?>">Siteye Dön</a>
+                        <a class="nav-item nav-link" href="<?= admin_url('exit') ?>">Çıkış</a>
                     </div>
                 </div>
             </nav>

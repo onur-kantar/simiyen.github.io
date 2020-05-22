@@ -35,20 +35,47 @@ if (post('register_submit')) {
             ]);
 
             if ($result) {
-                $success = 'Üyeliğiniz başarıyla oluşturuldu.';
                 User::Login([
                     'id' =>  $db->lastInsertId(),
                     'name' => $name,
                     'surName' => $surName,
                     'mail' => $mail
                 ]);
-                //header('Refresh:2;url=' . site_url());
+                header('Location:' . site_url());
             } else {
                 $error = 'Bir sorun oluştu, lütfen daha sonra tekrar deneyin.';
             }
         }
     }
 } elseif (post('login_submit')) {
+
+    /*
+<?php
+session_start();
+if(!empty($_POST["login"])) {
+	$conn = mysqli_connect("localhost", "root", "", "blog_samples");
+	$sql = "Select * from members where member_name = '" . $_POST["member_name"] . "'";
+        if(!isset($_COOKIE["member_login"])) {
+            $sql .= " AND member_password = '" . md5($_POST["member_password"]) . "'";
+	}
+        $result = mysqli_query($conn,$sql);
+	$user = mysqli_fetch_array($result);
+	if($user) {
+			$_SESSION["member_id"] = $user["member_id"];
+			
+			if(!empty($_POST["remember"])) {
+				setcookie ("member_login",$_POST["member_name"],time()+ (10 * 365 * 24 * 60 * 60));
+			} else {
+				if(isset($_COOKIE["member_login"])) {
+					setcookie ("member_login","");
+				}
+			}
+	} else {
+		$message = "Invalid Login";
+	}
+}
+?>
+*/
 
     $mail = post('mail');
     $password = post('password');
@@ -63,9 +90,17 @@ if (post('register_submit')) {
         if ($row) {
             $password_verify = password_verify($password, $row['password']);
             if ($password_verify) {
-                $success = 'Başarıyla giriş yaptınız. Yönlendiriliyorsunuz';
+                if (post("remember")) {
+                    setcookie("member_mail", $_POST["mail"], time() + (10 * 365 * 24 * 60 * 60));
+                    setcookie("member_password", $_POST["password"], time() + (10 * 365 * 24 * 60 * 60));
+                } else {
+                    if (isset($_COOKIE["member_login"])) {
+                        setcookie("member_mail", "");
+                        setcookie("member_password", "");
+                    }
+                }
                 User::Login($row);
-                header('Refresh:2;url=' . site_url());
+                header('Location:' . site_url());
             } else {
                 $error = 'Şifre hatalı.';
             }
@@ -73,6 +108,7 @@ if (post('register_submit')) {
             $error = 'E-posta hatalı.';
         }
     }
+
 }
 
 require view('login_register');

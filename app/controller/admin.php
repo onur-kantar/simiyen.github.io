@@ -19,13 +19,10 @@ $menus = [
     'contact' => [
         'title' => 'İletişim'
     ],
-    'announcement' => [
-        'title' => 'Duyuru Ekle'
+    'blog' => [
+        'title' => 'Blog Ekle'
     ],
-    'news' => [
-        'title' => 'Haber Ekle'
-    ],
-    'resume' => [
+    'edit-about-me' => [
         'title' => 'Özgeçmiş Düzenle'
     ]
 ];

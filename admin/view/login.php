@@ -9,13 +9,13 @@
     <form action="" method="post">
         <div class="form-group">
             <label for="exampleInputEmail1"> E-Posta Adresi</label>
-            <input name="mail" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            <input name="mail" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="E-Posta Adresinizi Giriniz">
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Şifre</label>
-            <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Şifrenizi Giriniz">
         </div>
-        <button name="submit" value="1" type="submit" class="btn btn-primary">Submit</button>
+        <button name="submit" value="1" type="submit" class="btn btn-primary">Giriş</button>
         <a class="btn btn-danger" href="<?=site_url();?>">Siteye Dön</a>
         
     </form>

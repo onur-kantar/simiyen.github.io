@@ -4,6 +4,7 @@ class User
 {
     public static function Login($data)
     {
+        if(isset($data['id']))
         $_SESSION['id'] = $data['id'];
         $_SESSION['name'] = $data['name'];
         $_SESSION['surName'] = $data['surName'];

@@ -269,7 +269,7 @@ a {
 
 
 /*Content Left*/
-
+/*
 .contents {
     margin-top: 0px;
 }
@@ -284,13 +284,13 @@ a {
     float: left;
     width: 46%;
     margin: 0px 2%;
-}
+}*/
 
 .title {
     border-bottom: 1px solid black;
     text-align: center;
 }
-
+/*
 .content {
     margin: 5% 0%;
     float: left;
@@ -313,7 +313,7 @@ a {
     margin: 0% 5%;
     width: 60%;
     float: left;
-}
+}*/
 
 @media screen and (max-width: 575px) {
     .contents-left {
@@ -499,9 +499,7 @@ video {
 
 /*About*/
 
-.about {
-    margin: 5%;
-}
+
 
 .about h1 {
     padding-bottom: 1%;

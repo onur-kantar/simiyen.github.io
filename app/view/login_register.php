@@ -6,11 +6,7 @@
             <?= $err ?>
         </div>
     <?php endif ?>
-    <?php if ($succ = success()) : ?>
-        <div class="alert alert-success" role="alert">
-            <?= $succ ?>
-        </div>
-    <?php endif ?>
+
     <div class="row">
 
         <div class="col-12 col-sm-6 mt-2 p-4 border-right">
@@ -46,14 +42,14 @@
                 <h3>Giriş Yap</h3>
                 <div class="form-group">
                     <label for="exampleInputEmail">Email</label>
-                    <input name="mail" value="<?= post('mail') ?>" type="email" class="form-control" id="exampleInputEmail">
+                    <input name="mail" value="<?= isset($_COOKIE["member_mail"]) ? $_COOKIE["member_mail"] : ""?>" type="email" class="form-control" id="exampleInputEmail">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword">Şifre</label>
-                    <input name="password" value="<?= post('password') ?>" type="password" class="form-control" id="exampleInputPassword">
+                    <input name="password" value="<?= isset($_COOKIE["member_password"]) ? $_COOKIE["member_password"] : ""?>" type="password" class="form-control" id="exampleInputPassword">
                 </div>
                 <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <input name="remember" <?php if(isset($_COOKIE["member_mail"])) { ?> checked <?php } ?> type="checkbox" class="form-check-input" id="exampleCheck1">
                     <label class="form-check-label" for="exampleCheck1">Beni Hatırla</label>
                 </div>
                 <input type="hidden" name="login_submit" value="1">

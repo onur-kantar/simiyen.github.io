@@ -34,7 +34,7 @@
     <div class="clear"></div>
     <div class="copyright">
         <p>
-            Onur Kantar © 2013 – 2019 - Tüm Hakları Saklıdır.
+            Onur Kantar © 2013 – 2020 - Tüm Hakları Saklıdır.
         </p>
     </div>
 </footer>

@@ -17,20 +17,27 @@
     <div id="container">
 
         <div class="header">
-            <a href="<?=site_url()?>">
-                <img src="./img/logo.png" alt="logo">
+            <a href="<?= site_url() ?>">
+                <img src="<?=img_url('logo.png')?>" alt="logo">
             </a>
             <div class="header-right">
                 <?php if (session('id')) : ?>
+
+
                     <div class="dropdown">
                         <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <?=session('name')." ".session('surName')?>
+                            <?= session('name') . " " . session('surName') ?>
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="<?=site_url('profile')?>">Profil</a>
-                            <a class="dropdown-item" href="<?=site_url('exit')?>">Çıkış Yap</a>
+                            <?php if (session('role') == 1) : ?>
+                                <a class="dropdown-item" href="<?= admin_url('index') ?>">Admin Panel</a>
+                            <?php else : ?>
+                                <a class="dropdown-item" href="<?= site_url('profile') ?>">Profil</a>
+                            <?php endif; ?>
+                            <a class="dropdown-item" href="<?= site_url('exit') ?>">Çıkış Yap</a>
                         </div>
                     </div>
+
                 <?php else : ?>
                     <a href="<?= site_url('login_register') ?>" type="button" class="btn btn-dark">Kaydol / Giriş Yap</a>
                 <?php endif; ?>
@@ -77,7 +84,7 @@
 
             </div>
 
-            <a href="index.php?page=about">Hakkımda</a>
+            <a href="<?= site_url('about-me') ?>">Hakkımda</a>
 
             <a href="index.php?page=contact">İletişim</a>
 

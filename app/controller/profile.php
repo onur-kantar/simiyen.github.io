@@ -1,9 +1,9 @@
 <?php
 
-$id = $_SESSION['id'];
+$id = session('id');
 
 if (!$id) {
-    header('Location:' . admin_url('login'));
+    header('Location:' . site_url());
     exit;
 }
 
@@ -12,7 +12,7 @@ $row = $db->from('users')
     ->first();
 
 if (!$row) {
-    header('Location:' . admin_url('users'));
+    header('Location:' . site_url());
     exit;
 }
 
@@ -20,15 +20,14 @@ if (post('submit')) {
 
     if ($data = form_control('mail')) {
 
-        //$data['user_url'] = permalink($data['name']);
-
         $query = $db->update('users')
             ->where('id', $id)
             ->set($data);
 
         if ($query) {
             User::Login($data);
-            header('Location:' . admin_url());
+            print_r($data);
+            header('Location:' . site_url());
         } else {
             $error = 'Bir sorun oluştu.';
         }
@@ -36,4 +35,4 @@ if (post('submit')) {
         $error = 'Eksik alanlar var, lütfen kontrol edin.';
     }
 }
-require admin_view('index');
+require view('profile');
