@@ -2,8 +2,9 @@
 
 <form class="form-inline mt-3 mb-3 float-right" method="post" action="">
     <div class="form-group mx-sm-3 mb-2">
-        <input type="password" class="form-control" id="inputPassword2" placeholder="Ara">
+        <input name="search" type="text" class="form-control" id="inputSearch" placeholder="Ara">
     </div>
+    <input type="hidden" name="searchBtn" value="1">
     <button type="submit" class="btn btn-primary mb-2">Ara</button>
 </form>
 
@@ -22,7 +23,7 @@
 <?php endforeach; ?>
 <?php if ($totalRecord > $pageLimit) : ?>
     <ul class="pagination pagination-sm">
-        <?= $db->showPagination(site_url(route(0) . '?name=' . $name . '&' . $pageParam . '=[page]')) ?>
+        <?= $db->showPagination(site_url(route(0) . '?id=' . $id . '&' . $pageParam . '=[page]')) ?>
     </ul>
 <?php endif; ?>
 

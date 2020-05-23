@@ -86,7 +86,7 @@
 
             <a href="<?= site_url('about-me') ?>">Hakkımda</a>
 
-            <a href="index.php?page=contact">İletişim</a>
+            <a href="<?= site_url('contact') ?>">İletişim</a>
 
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
 

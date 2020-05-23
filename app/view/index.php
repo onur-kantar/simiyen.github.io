@@ -46,7 +46,7 @@
 <div class="d-sm-flex justify-content-between">
     <div class="col-12 col-sm-6 ">
         <div class="title">
-            <h1> <a href="<?= site_url('blog') ?>/?name=news"> Haberler </a></h1>
+            <h1> <a href="<?= site_url('blog') ?>/?id=2"> Haberler </a></h1>
         </div>
         <?php foreach ($news as $row) : ?>
             <div class="mt-2 mb-5">
@@ -54,7 +54,9 @@
                 <img src="./img/cybertruck.jpg" alt="cybertruck">
                 </div>-->
                 <div class="container">
-                    <h4 class="text-center"><a target="_blank" href=""><?= $row['title'] ?></a></h4>
+                    <h4 class="text-center">
+                        <a target="_blank" href="<?= site_url('blog') . "/" . $row['url'] ?>"><?= $row['title'] ?></a>
+                    </h4>
                     <p><?= $row['short'] ?></p>
                 </div>
             </div>
@@ -63,7 +65,7 @@
 
     <div class="col-12 col-sm-6">
         <div class="title">
-            <h1> <a href="<?= site_url('blog') ?>/?name=notice"> Duyurular </a></h1>
+            <h1> <a href="<?= site_url('blog') ?>/?id=1"> Duyurular </a></h1>
         </div>
         <?php foreach ($notice as $row) : ?>
             <div class="mt-2 mb-5">
@@ -71,7 +73,9 @@
                 <img src="./img/cybertruck.jpg" alt="cybertruck">
                 </div>-->
                 <div class="container">
-                    <h4 class="text-center"><a target="_blank" href=""><?= $row['title'] ?></a></h4>
+                    <h4 class="text-center">
+                        <a target="_blank" href="<?= site_url('blog') . "/" . $row['url'] ?>"><?= $row['title'] ?></a>
+                    </h4>
                     <p><?= $row['short'] ?></p>
                 </div>
             </div>
