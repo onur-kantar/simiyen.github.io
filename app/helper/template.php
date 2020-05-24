@@ -1,27 +1,35 @@
 <?php
 
-function site_url($url = false){
+function site_url($url = false)
+{
 
-    return URL.'/'.$url;
-
-}
-function img_url($url = false){
-    return URL.'/img/'.$url;
-
+    return URL . '/' . $url;
 }
 
-function public_url($url = false){
-
-    return URL.'/public/'.$url;
-    
+function img_url($url = false)
+{
+    return URL . '/img/' . $url;
 }
 
-function error(){
+function js_url($url = false)
+{
+    return URL . '/js/' . $url .'.js';
+}
+
+function public_url($url = false)
+{
+
+    return URL . '/public/' . $url;
+}
+
+function error()
+{
     global $error;
-    return isset($error)?$error:false;
+    return isset($error) ? $error : false;
 }
 
-function success(){
+function success()
+{
     global $success;
-    return isset($success)?$success:false;
+    return isset($success) ? $success : false;
 }

@@ -5,19 +5,19 @@
 
     <div class="mySlides myFade">
 
-        <img src="./img/img1.jpg" style="width:100%">
+        <img src="<?=img_url('img1.jpg')?>" style="width:100%">
 
     </div>
 
     <div class="mySlides myFade">
 
-        <img src="./img/img2.jpg" style="width:100%">
+        <img src="<?=img_url('img2.jpg')?>" style="width:100%">
 
     </div>
 
     <div class="mySlides myFade">
 
-        <img src="./img/img3.jpg" style="width:100%">
+        <img src="<?=img_url('img3.jpg')?>" style="width:100%">
 
     </div>
 
@@ -39,7 +39,7 @@
 </div>
 <div class="clear"></div>
 
-<script src="js/slider.js"></script>
+<script src="<?=js_url('slider')?>"></script>
 <!--www.w3schools.com'dan alıntı-->
 
 

@@ -72,4 +72,5 @@
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
 
         </div>
+        <script src="<?=js_url('menu')?>"></script>
         <!--www.w3schools.com'dan alıntı-->
