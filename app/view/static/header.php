@@ -18,7 +18,7 @@
 
         <div class="header">
             <a href="<?= site_url() ?>">
-                <img src="<?=img_url('logo.png')?>" alt="logo">
+                <img src="<?= img_url('logo.png') ?>" alt="logo">
             </a>
             <div class="header-right">
                 <?php if (session('id')) : ?>
@@ -47,47 +47,28 @@
         <!--www.w3schools.com'dan alıntı-->
         <div class="topnav" id="myTopnav">
 
-            <a href="index.php" class="active">Anasayfa</a>
+            <a href="<?= site_url() ?>">Anasayfa</a>
 
             <div class="myDropdown">
-
-                <button class="dropbtn">Videolar
-
-                </button>
-
+                <button class="dropbtn">Videolar</button>
                 <div class="myDropdown-content">
-                    <a href="index.php?page=video1">Elvis Presley</a>
-
-                    <a href="index.php?page=video2">Charlie Chaplin</a>
-
-                    <a href="index.php?page=video3">Mr. Bean</a>
+                    <a href="<?= site_url('videos') ?>?id=1">Elvis Presley</a>
+                    <a href="<?= site_url('videos') ?>?id=2">Charlie Chaplin</a>
+                    <a href="<?= site_url('videos') ?>?id=3">Mr. Bean</a>
                 </div>
-
             </div>
 
             <div class="myDropdown">
-
-                <button class="dropbtn">Çalışmalar
-
-                </button>
-
+                <button class="dropbtn">Çalışmalar</button>
                 <div class="myDropdown-content">
-
-
-                    <a target="_blank" href="index.php?page=studies1">Chernozem</a>
-
-                    <a target="_blank" href="index.php?page=studies2">Mobilya Otomasyonu</a>
-
-                    <a target="_blank" href="index.php?page=studies3">Course Management System</a>
-
+                    <a target="_blank" href="<?= site_url('studies') ?>?id=1">Chernozem</a>
+                    <a target="_blank" href="<?= site_url('studies') ?>?id=2">Mobilya Otomasyonu</a>
+                    <a target="_blank" href="<?= site_url('studies') ?>?id=3">Course Management System</a>
                 </div>
-
             </div>
 
             <a href="<?= site_url('about-me') ?>">Hakkımda</a>
-
             <a href="<?= site_url('contact') ?>">İletişim</a>
-
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
 
         </div>

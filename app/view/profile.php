@@ -3,9 +3,8 @@
 
 
 <div class="container w-50 p-3">
-    <h3>Profil Düzenle</h3>
-
-    <form action="" method="post">
+    <form action="" method="post" class="mb-3">
+        <h3>Profil Düzenle</h3>
         <div class="form-group">
             <label for="InputName">Ad</label>
             <input name="name" type="text" class="form-control" id="InputName" value="<?= post('name') ? post('name') : $row['name'] ?>">
@@ -21,6 +20,8 @@
         <button name="submit" value="1" type="submit" class="btn btn-primary">Kaydet</button>
         </ul>
     </form>
+    <a href="<?= site_url('change_password') ?>">Şifre Değiştir</a>
+
 </div>
 
 

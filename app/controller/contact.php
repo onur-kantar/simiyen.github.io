@@ -6,7 +6,7 @@ if (post('submit')) {
     $title = post('title');
     $message = post('message');
     $id = session('id');
-
+    $sentMail = "onurkantr@gmail.com";
     if (empty($id)) {
         $error = "Mesaj Göndermek İçin Lütfen Giriş Yapın";
     } else {
@@ -21,7 +21,7 @@ if (post('submit')) {
             ]);
 
         try {
-            $mail = mailSend($name, $surName, $mail, $title, $message);
+            $mail = mailSend($name, $surName, $mail, $title, $message, $sentMail);
             $success = "Mesaj Başarıyla Gönderildi";
         } catch (Exception $e) {
             $error = "Mail Gönderilemedi. Hata: {$mail->ErrorInfo}";

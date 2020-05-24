@@ -28,7 +28,8 @@ if (post('submit')) {
 
         if ($query) {
             User::Login($data);
-            header('Location:' . admin_url());
+            $success = 'Başarıyla güncelleştirildi.';
+            //header('Location:' . admin_url());
         } else {
             $error = 'Bir sorun oluştu.';
         }

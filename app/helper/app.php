@@ -22,7 +22,7 @@ function session($name)
     return isset($_SESSION[$name]) ? $_SESSION[$name] : false;
 }
 
-function mailSend($name, $surName, $myMail, $title, $message)
+function mailSend($name, $surName, $myMail, $title, $message, $sentMail)
 {
     $mail = new PHPMailer(true);
 
@@ -43,7 +43,7 @@ function mailSend($name, $surName, $myMail, $title, $message)
 
     $mail->isHTML(true);
     $mail->setFrom('onurkantaryedek@gmail.com', 'Web Tasarım Projesi');
-    $mail->addAddress('onurkantr@gmail.com', 'Onur Kantar');
+    $mail->addAddress($sentMail, 'Mail Address');
 
     $mail->send();
 

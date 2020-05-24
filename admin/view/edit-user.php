@@ -1,12 +1,10 @@
 <?php require admin_view('static/header') ?>
 
-<h3>
-    Üye Düzenle
-</h3>
 
-<div class="clear" style="height: 10px;"></div>
+<!--<div class="clear" style="height: 10px;"></div>-->
 
-<div class="box-">
+<div class="container">
+    <h3>Üye Düzenle</h3>
     <form action="" method="post">
         <div class="form-group">
             <label for="InputName">Ad</label>
@@ -15,6 +13,10 @@
         <div class="form-group">
             <label for="InputSurName">Soyad</label>
             <input name="surName" type="text" class="form-control" id="InputSurName" value="<?= post('surName') ? post('surName') : $row['surName'] ?>">
+        </div>
+        <div class="form-group">
+            <label for="InputSurName">Kullanıcı Adı</label>
+            <input name="userName" type="text" class="form-control" id="InputSurName" value="<?= post('userName') ? post('userName') : $row['userName'] ?>">
         </div>
         <div class="form-group">
             <label for="InputEmail">E-Posta</label>
@@ -29,7 +31,7 @@
             </select>
         </div>
         <button name="submit" value="1" type="submit" class="btn btn-primary">Kaydet</button>
-        <a class="btn btn-danger" href="<?=admin_url('users')?>">Geri Dön</a>
+        <a class="btn btn-danger" href="<?= admin_url('users') ?>">Geri Dön</a>
         </ul>
     </form>
 </div>
