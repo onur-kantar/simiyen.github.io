@@ -67,15 +67,13 @@ if (post('register_submit')) {
         if ($row) {
             $password_verify = password_verify($password, $row['password']);
             if ($password_verify) {
-                
+
                 if (post("remember")) {
                     setcookie("member_userName", $_POST["userName"], time() + (10 * 365 * 24 * 60 * 60));
                     setcookie("member_password", $_POST["password"], time() + (10 * 365 * 24 * 60 * 60));
                 } else {
-                    if (isset($_COOKIE["member_login"])) {
-                        setcookie("member_userName", "");
-                        setcookie("member_password", "");
-                    }
+                    setcookie("member_userName", "");
+                    setcookie("member_password", "");
                 }
                 User::Login($row);
                 header('Location:' . site_url());

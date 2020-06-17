@@ -21,7 +21,7 @@ if (post('forget')) {
                 $newPass,
                 $mail
             );
-            $newPass = password_hash($newPassword, PASSWORD_DEFAULT);
+            $newPass = password_hash($newPass, PASSWORD_DEFAULT);
             $db->update('users')
                 ->where('id', $row['id'])
                 ->set([

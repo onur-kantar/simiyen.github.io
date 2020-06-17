@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Onur Kantar</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="<?= public_url('style.css') ?>">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">    <link rel="stylesheet" href="<?= public_url('style.css') ?>">
     <script src="https://kit.fontawesome.com/b05edded2b.js" crossorigin="anonymous"></script>
     <script src="./scroll.js"></script>
     <script src="/menu.js"></script>
@@ -72,5 +71,5 @@
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
 
         </div>
-        <script src="<?=js_url('menu')?>"></script>
+        <script src="<?= js_url('menu') ?>"></script>
         <!--www.w3schools.com'dan alıntı-->
