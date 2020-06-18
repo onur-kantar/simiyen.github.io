@@ -8,8 +8,8 @@
     <title>Onur Kantar</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">    <link rel="stylesheet" href="<?= public_url('style.css') ?>">
     <script src="https://kit.fontawesome.com/b05edded2b.js" crossorigin="anonymous"></script>
-    <script src="./scroll.js"></script>
-    <script src="/menu.js"></script>
+    <script src="<?=js_url('scroll')?>"></script>
+    <script src="<?=js_url('menu')?>"></script>
 </head>
 
 <body id="body">
